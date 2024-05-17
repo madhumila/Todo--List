@@ -1,5 +1,5 @@
 .add-task-form {
-    position: fixed;
+    position: absolute  ;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -7,6 +7,7 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
 }
 
 .add-task-form form {
@@ -21,6 +22,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
+    font-size: 20px;
 }
 
 .add-task-form button {

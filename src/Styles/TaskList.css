@@ -1,33 +1,33 @@
 /* Base styles */
 .task-list-container {
-    width: 50%;
-    margin: 20px auto;
-    margin-top: 200px;
+    width: 40%;
+    /* margin: 20px auto; */
+    margin-top: 300px;
     background-color: #353434;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 100px auto;
 }
 
 .task-list {
-    width:100%;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Adjust to column direction */
+    align-items: center;
 }
 
 .task-card {
-    width: calc(100% - 80px);
+    width: calc(100% - 40px);
     background-color: #403f3f;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    margin-bottom: 20px;
-
+    position: relative; /* Set position relative for absolute positioning of delete button */
 }
 
-.task-card h3 {
+.task-card h2 {
     margin-bottom: 5px;
 }
 
@@ -71,27 +71,31 @@
     background-color: #0056b3;
 }
 
-.task-card-outer{
+.task-card-outer {
     display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between elements */
 }
 
 .task-delete {
-    display: flex;
-    align-items: center;
-    margin-left: 40%;
+    position: absolute; /* Position absolute to the task-card */
+    right: 10px; /* Adjust the right position as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
 }
 
-.task-details{
+.task-details {
     padding: 10px; /* Add padding */
-    text-align: center; 
+    flex-grow: 1; /* Allow details to grow */
 }
-.task-check{
+
+.task-check {
     display: flex;
     align-items: center;
 }
 
 /* Responsive styles */
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .task-list-container {
         width: 90%;
         margin-top: 5%;
@@ -104,4 +108,4 @@
     .add-task-form {
         width: 90%;
     }
-} */
+}

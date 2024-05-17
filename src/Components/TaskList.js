@@ -13,7 +13,7 @@ const TaskList = ({ tasks, onDeleteTask }) => {
               </div>
 
               <div className="task-details">
-                <h3>{task.title}</h3>
+                <h2>{task.title}</h2>
                 <p>{task.description}</p>
               </div>
               <div className="task-delete">
