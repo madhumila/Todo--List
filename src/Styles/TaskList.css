@@ -1,111 +1,151 @@
-/* Base styles */
+.empty-message {
+  width: 60%;
+  /* background-color: #353434; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 100 auto; */
+  margin-top: 250px;
+  font-size: 20px;
+  margin-left: 100px;
+}
+
 .task-list-container {
-    width: 40%;
-    /* margin: 20px auto; */
-    margin-top: 300px;
-    background-color: #353434;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 100px auto;
+  width: 60%;
+  /* margin: 20px auto; */
+  margin-top: 400px;
+  background-color: #353434;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 250px auto;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
 
 .task-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* Adjust to column direction */
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .task-card {
-    width: calc(100% - 40px);
-    background-color: #403f3f;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    position: relative; /* Set position relative for absolute positioning of delete button */
+  width: calc(100% - 40px);
+  background-color: #403f3f;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .task-card h2 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .task-card p {
-    margin: 0;
+  margin: 0;
 }
 
 .add-task-form {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #353434;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #353434;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .add-task-form form {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .add-task-form input,
 .add-task-form button {
-    margin-right: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
 }
 
 .add-task-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .add-task-form button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .task-card-outer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensure space between elements */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .task-delete {
-    position: absolute; /* Position absolute to the task-card */
-    right: 10px; /* Adjust the right position as needed */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center vertically */
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .task-details {
-    padding: 10px; /* Add padding */
-    flex-grow: 1; /* Allow details to grow */
+  padding: 10px;
+  flex-grow: 1;
+  color: #ffb852;
 }
 
 .task-check {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.task-card.completed .task-details h2,
+.task-card.completed .task-details p {
+  text-decoration: line-through;
+  color: #0c0b0b;
+}
+.task-card.completed .task-check input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.task-card.completed .task-check input[type="checkbox"]:checked::before {
+  content: "\2713";
+  font-size: 12px;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-    .task-list-container {
-        width: 90%;
-        margin-top: 5%;
-    }
+  .task-list-container {
+    width: 90%;
+    margin-top: 300px;
+  }
 
-    .task-card {
-        width: calc(100% - 20px);
-    }
-
-    .add-task-form {
-        width: 90%;
-    }
+  .task-card {
+    width: calc(100% - 20px);
+  }
 }

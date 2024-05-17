@@ -20,9 +20,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Todo List</h1>
+      <div className='todo-list-heading'><h1>Create Your Todo-List</h1></div>
       <div className="content">
-        <AddTaskForm onAddTask={(newTask) => setTasks([...tasks, newTask])} />
+        <AddTaskForm onAddTask={(newTask) => setTasks([newTask,...tasks])} />
         <TaskList tasks={tasks} onDeleteTask={handleDelete} />
       </div>
       
