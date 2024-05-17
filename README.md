@@ -1,6 +1,6 @@
 # Todo List Application 
 
-This is a todo application where a user can add tasks to a task list, change the status of the task also delete a task
+This is a to-do application where users can add tasks to a task list, change the status of tasks, and delete tasks.
 
 ## Instructions
 
